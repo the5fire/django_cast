@@ -2,9 +2,10 @@
 
 from django.shortcuts import render
 
-from .models import Movie
+from .models import Cast
 # Create your views here.
 
+
 def index(request):
-    movies = Movie.objects.all()
-    return render(request, "index.html", {"movies": movies})
+    casts = Cast.objects.all()
+    return render(request, "index.html", {"casts": casts})
